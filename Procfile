@@ -1,1 +1,1 @@
-web: gunicorn Team45-CFG.wsgi
+web: gunicorn app:app
