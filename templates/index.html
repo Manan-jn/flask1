@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Farming Advice</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  
+</head>
+
+<body style=" background-color: #285f34">
+  <header style="color: white">PREDICT WHICH CROP CAN GIVE BETTER YIELD </header>
+  
+  <form id="form" style="color: white; display:flex; justify-content:center;" action="{{ url_for('predict')}}" method="post">
+    <h4>How this helps?</h4>
+    <h4>Early three-quarters of India’s families depend on rural incomes which includes mainly the agricultural activities. Every solution if rightly executed can make a huge difference!</h4><br>
+      
+        <input type="nitrogen" type="text" placeholder="Value for Nitrogen" required="required"/><br>
+        <input type="text" name="phosphorus" placeholder="Value for Phosphorus" required="required" /><br>
+        <input type="text" name="pottasium" placeholder="Value for Pottasium" required="required" /><br>
+        <input type="text" name="temperature" placeholder="Value for temperature" required="required" /> <br>
+        <input type="text" name="humidity" placeholder="Value for humidity" required="required" /><br>
+        <input type="text" name="ph" placeholder="Value for PH" required="required" /><br>
+        <input type="text" name="rainfall" placeholder="Value for rainfall" required="required" /><br>
+        <input type="text" name="Water Level" placeholder="Value for Water Level" required="required" /><br>
+        
+     <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+     <br>
+     <br>
+     <h4> {{ prediction_text }} </h4>
+    
+  </form>
+  </body>
+
+</html>

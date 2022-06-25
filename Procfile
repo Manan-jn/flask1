@@ -1,0 +1,1 @@
+web: gunicorn Team45-CFG.wsgi
